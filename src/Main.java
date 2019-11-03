@@ -24,7 +24,7 @@ public class Main {
         month1 = scanner.next();
         boolean f7;
         Month[] month = Month.values();
-        for (int i = 0; i < month.length; i++) {
+        for (int i = 0; i < month.length; i++){
             boolean f6 = month[i].name().equalsIgnoreCase(month1);
             if (!f6) {
                 try {
@@ -37,7 +37,7 @@ public class Main {
                 i=month.length;
                 showmenu();
                 line = scanner.next();
-                while (!line.equalsIgnoreCase("quit")) {
+                while (!line.equalsIgnoreCase("quit")){
                     switch (line) {
                         case "1":
                             searchmonth();
