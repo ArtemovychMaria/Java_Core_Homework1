@@ -34,6 +34,7 @@ public class Main {
                     System.out.println(e.toString());
                 }
             } else {
+                i=month.length-1;
                 showmenu();
                 line = scanner.next();
                 while (!line.equalsIgnoreCase("quit")) {
