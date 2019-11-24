@@ -1,6 +1,6 @@
 public interface Iterator {
     public boolean hasNext();
 
-    public Integer next();
+    public Object next();
 
 }
