@@ -1,5 +1,5 @@
 public class Collection {
-    static Integer[] array;
+    static Number[] array;
 
     Collection(Integer[] array) {
         this.array = array;
@@ -14,7 +14,7 @@ public class Collection {
         }
 
         @Override
-        public Integer next() {
+        public Object next() {
             return array[index++];
         }
     }
@@ -29,7 +29,7 @@ public class Collection {
             }
 
             @Override
-            public Integer next() {
+            public Object next() {
                 index=index-2;
                 return array[index+2];
             }
@@ -53,7 +53,7 @@ public class Collection {
             }
 
             @Override
-            public Integer next() {
+            public Object next() {
                 index=index-3;
                  return array[index+3];
             }
@@ -72,7 +72,7 @@ public class Collection {
             @Override
             public Integer next() {
                 index=index+5;
-                int num= array[index-5];
+                int num= (int)array[index-5];
                 if(num%2==0){
                     return num-=100;
                 }else
@@ -93,7 +93,7 @@ public class Collection {
             @Override
             public Integer next() {
                 index += 2;
-                int num = array[index - 2];
+                int num = (int)array[index - 2];
                 if (num % 2 == 0) {
                     return num += 1;
                 } else
