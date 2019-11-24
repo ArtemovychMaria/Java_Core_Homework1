@@ -9,7 +9,7 @@ public class Main {
         Iterator forwardIterator = collection.createForwardIterator();
 
         while (forwardIterator.hasNext()){
-            Integer next = forwardIterator.next();
+            Integer next = (int)forwardIterator.next();
             if(next %2!=0) {
                 next = 0;
             }
@@ -31,7 +31,7 @@ public class Main {
 
         Iterator backIterator = collection.BackAnonimous();
         while (backIterator.hasNext()){
-            Integer next = backIterator.next();
+            Integer next = (int)backIterator.next();
             if (next%2!=0){
                 System.out.println(next);
             }
