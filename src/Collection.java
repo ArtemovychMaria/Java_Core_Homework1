@@ -49,13 +49,13 @@ public class Collection {
             int index=array.length-1;
             @Override
             public boolean hasNext() {
+                index=index-2;
                 return index>=0;
             }
 
             @Override
             public Object next() {
-                index=index-3;
-                 return array[index+3];
+                 return array[index];
             }
         };
         }
@@ -66,13 +66,13 @@ public class Collection {
 
             @Override
             public boolean hasNext() {
+                index+=4;
                 return index<array.length;
             }
 
             @Override
             public Integer next() {
-                index=index+5;
-                int num= (int)array[index-5];
+                int num= (int)array[index];
                 if(num%2==0){
                     return num-=100;
                 }else
@@ -83,17 +83,17 @@ public class Collection {
         }
 
         static class StaticForward implements Iterator {
-            int index = 0;
+            int index = 1;
 
             @Override
             public boolean hasNext() {
-                return index < array.length;
+                index+=1;
+              return index < array.length;
             }
 
             @Override
             public Integer next() {
-                index += 2;
-                int num = (int)array[index - 2];
+                int num = (int)array[index++];
                 if (num % 2 == 0) {
                     return num += 1;
                 } else
